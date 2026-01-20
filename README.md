@@ -1,72 +1,68 @@
-# BibliotekaNumeryczna
+---
 
-# NumLibCpp - Biblioteka Numeryczna w C++
+# NumLibCpp — High-Performance Numerical Methods Library
 
-NumLibCpp to biblioteka C++ dostarczająca implementacje popularnych metod obliczeniowych.
+**NumLibCpp** is a modern C++17 library designed for scientific computing and engineering applications. It provides a suite of robust implementations for essential numerical algorithms, focusing on efficiency, modularity, and clean code practices.
 
-## Funkcjonalności
+[![Language](https://img.shields.io/badge/language-C%2B%2B17-blue.svg)](https://en.cppreference.com/w/cpp/17)
+[![Build System](https://img.shields.io/badge/build-CMake-green.svg)](https://cmake.org/)
 
-Biblioteka implementuje następujące metody:
+## 🚀 Key Features
 
-*   **Rozwiązywanie układów równań liniowych:** Metoda eliminacji Gaussa.
-*   **Interpolacja:** Interpolacja Lagrange'a.
-*   **Aproksymacja:**
-*   **Całkowanie numeryczne:** Metoda Simpsona.
-*   **Rozwiązywanie równań różniczkowych zwyczajnych:** Metoda Rungego-Kutty 4. rzędu (RK4).
-*   **Rozwiązywanie równań nieliniowych:** Metoda Krzywej Lini
-*   **Różniczkowanie numeryczne:** Metoda różnic centralnych.
+The library covers a wide range of numerical challenges:
 
-## Struktura Projektu
+*   **Linear Algebra:** Solving systems of linear equations using **Gaussian Elimination**.
+*   **Interpolation:** High-precision **Lagrange Interpolation**.
+*   **Approximation:** Optimized algorithms for data fitting (e.g., Least Squares).
+*   **Numerical Integration:** Reliable integration using **Simpson’s Rule**.
+*   **Differential Equations:** Solving Ordinary Differential Equations (ODEs) via the **4th Order Runge-Kutta Method (RK4)**.
+*   **Root-Finding:** Solving non-linear equations using the **Secant Method**.
+*   **Numerical Differentiation:** Gradient estimation using the **Central Difference Method**.
 
+## 🛠 Project Structure
+
+The project follows industry-standard directory layouts for easy integration and scalability:
+
+```text
 NumLibCpp/
+├── include/NumLibCpp/   # Header-only interfaces and templates
+├── src/                 # Implementation files
+├── tests/               # Unit tests ensuring algorithm correctness
+├── examples/            # Ready-to-run usage demonstrations
+├── CMakeLists.txt       # Unified build configuration
+└── README.md            # Documentation
+```
 
-├── CMakeLists.txt       # Główny plik budujący CMake
+## 💻 Tech Stack & Requirements
 
-├── README.md            # Ten plik
+*   **Standard:** C++17.
+*   **Build System:** CMake 3.10+.
+*   **Compiler:** GCC, Clang, or MSVC.
 
-├── include/NumLibCpp/   # Pliki nagłówkowe (.h)
+## 🏗 Installation & Building
 
-├── src/                 # Pliki źródłowe (.cpp)
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/NumLibCpp.git
+cd NumLibCpp
+```
 
-├── tests/               # Testy jednostkowe
+### 2. Configure and Build
+```bash
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
 
-└── examples/            # Przykłady użycia
-
-## Wymagania
-
-*   Kompilator C++17
-*   CMake
-
-## Budowanie Biblioteki
-
-1.  **Sklonuj repozytorium (jeśli jest w repozytorium git):**
-    ```bash
-    git clone <URL_REPOZYTORIUM>
-    cd NumLibCpp
-    ```
-
-2.  **Utwórz katalog budowania i skonfiguruj CMake:**
-    ```bash
-    mkdir build
-    cd build
-    cmake ..
-    ```
-
-3.  **Skompiluj projekt:**
-    ```bash
-    cmake --build .
-    ```
-
-## Uruchamianie Testów
-
-Po zbudowaniu projektu, testy można uruchomić z katalogu `build`:
+## 🧪 Testing and Quality Assurance
 
 ```bash
-./tests/Debug/run_all_tests.exe 
+# Run all unit tests from the build directory
+./tests/run_all_tests
 ```
 
-## Uruchamianie przykładów użycia
-```
-./examples/Debug/math_functions.exe
-./examples/Debug/engineering_problem.exe
-```
+## 📚 Examples
+
+Check the `examples/` directory to see how to integrate NumLibCpp into your own projects. Example outputs include:
+- `math_functions.exe`: Demonstration of general calculus features.
+- `engineering_problem.exe`: Solving real-world ODE and linear system scenarios.
